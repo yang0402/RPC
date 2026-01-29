@@ -56,6 +56,14 @@
             background: #4caf50;
             color: white;
         }
+        .btn-multiply {
+            background: #9c27b0;
+            color: white;
+        }
+        .btn-divide {
+            background: #ff9800;
+            color: white;
+        }
         .btn:hover {
             transform: scale(1.05);
             opacity: 0.9;
@@ -72,6 +80,8 @@
         <div class="buttons">
             <button class="btn btn-minus" onclick="decrease()">-</button>
             <button class="btn btn-plus" onclick="increase()">+</button>
+            <button class="btn btn-multiply" onclick="multiply()">×2</button>
+            <button class="btn btn-divide" onclick="divide()">÷2</button>
         </div>
     </div>
     <script>
@@ -85,6 +95,16 @@
 
         function increase() {
             count++;
+            display.textContent = count;
+        }
+
+        function multiply() {
+            count *= 2;
+            display.textContent = count;
+        }
+
+        function divide() {
+            count = Math.trunc(count / 2);
             display.textContent = count;
         }
     </script>
